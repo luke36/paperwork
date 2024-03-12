@@ -1,0 +1,41 @@
+整体结构:
+   conv
+   ReLU
+   conv
+   ReLU
+max-pooling
+   conv
+   ReLU
+   conv
+   ReLU
+max-pooling
+   conv
+   ReLU
+   conv
+   ReLU
+   conv        *
+   ReLU
+max-pooling
+   conv
+   ReLU
+   conv
+   ReLU
+   conv        *
+   ReLU
+max-pooling
+   conv
+   ReLU
+   conv
+   ReLU
+   conv        *
+   ReLU
+max-pooling
+    FC        4096
+   ReLU
+    FC        4096
+   ReLU
+    FC        1000
+  softmax
+
+其中卷积核均为3x3, 步长均为1, 填充均为1. 池化核大小2x2, 步长2. 在论文中的
+Configuration C中, 带 * 号的卷积层的卷积核大小为1x1.
